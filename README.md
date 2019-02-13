@@ -1,9 +1,26 @@
 # GildedRose-Refactoring-Kata-Python
 
+<!-- TOC -->
+
+- [GildedRose-Refactoring-Kata-Python](#gildedrose-refactoring-kata-python)
+    - [Introduction](#introduction)
+    - [Requirements](#requirements)
+    - [Quick start](#quick-start)
+        - [Unit tests](#unit-tests)
+        - [TextTest](#texttest)
+        - [Coverage](#coverage)
+    - [Formatter](#formatter)
+
+<!-- /TOC -->
+
+## Introduction
+
 This repository contains my implementation of the GildedRose-Refactoring-Kata in Python
 that you can find here: [https://github.com/emilybache/GildedRose-Refactoring-Kata](https://github.com/emilybache/GildedRose-Refactoring-Kata).
 
 The code respects the following requirements: [https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt](https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt).
+
+
 
 ## Requirements
 
