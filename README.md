@@ -5,6 +5,10 @@ that you can find here: [https://github.com/emilybache/GildedRose-Refactoring-Ka
 
 The code respects the following requirements: [https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt](https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt).
 
+## Requirements
+
+- Python3
+
 ## Quick start
 
 To create the virtual environment and install the dependencies:

@@ -7,7 +7,7 @@ init:
 	./venv/bin/pip install -r requirements.txt
 
 test:
-	./venv/bin/python test_*
+	./venv/bin/python -m unittest tests/test*
 
 coverage:
 	./venv/bin/coverage run test_* && ./venv/bin/coverage html
