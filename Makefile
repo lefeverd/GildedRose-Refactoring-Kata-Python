@@ -10,4 +10,4 @@ test:
 	./venv/bin/python -m unittest tests/test*
 
 coverage:
-	./venv/bin/coverage run test_* && ./venv/bin/coverage html
+	./venv/bin/coverage run -m unittest tests/test* && ./venv/bin/coverage html
