@@ -1,4 +1,4 @@
-.PHONY: init test
+.PHONY: init test coverage
 
 all: init
 
@@ -8,3 +8,6 @@ init:
 
 test:
 	./venv/bin/python test_*
+
+coverage:
+	./venv/bin/coverage run test_* && ./venv/bin/coverage html

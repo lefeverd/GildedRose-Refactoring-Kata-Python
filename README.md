@@ -34,3 +34,13 @@ Then run it:
 ```bash
 TEXTTEST_HOME=$(pwd)/texttests texttest -a gr
 ```
+
+### Coverage
+
+To get the coverage report, run:
+
+```bash
+make coverage
+```
+
+It will generate the HTML report in `htmlcov`.
