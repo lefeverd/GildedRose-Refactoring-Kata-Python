@@ -25,13 +25,3 @@ class GildedRose:
         for item in self.items:
             behavior = BEHAVIORS.get(item.name, DEFAULT_BEHAVIOR)
             behavior.update_quality(item)
-
-
-class Item:
-    def __init__(self, name, sell_in, quality):
-        self.name = name
-        self.sell_in = sell_in
-        self.quality = quality
-
-    def __repr__(self):
-        return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
