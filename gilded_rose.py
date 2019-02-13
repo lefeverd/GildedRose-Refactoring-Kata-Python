@@ -1,12 +1,29 @@
 # -*- coding: utf-8 -*-
 
 
+class AgedBrieBehavior:
+    def update_quality(self, item):
+        item.sell_in = item.sell_in - 1
+        if item.sell_in < 0:
+            item.quality = min(50, item.quality + 2)
+        else:
+            item.quality = min(50, item.quality + 1)
+
+
+BEHAVIORS = {
+    "Aged Brie": AgedBrieBehavior(),
+}
+
+
 class GildedRose:
     def __init__(self, items):
         self.items = items
 
     def update_quality(self):
         for item in self.items:
+            if BEHAVIORS.get(item.name, False):
+                BEHAVIORS.get(item.name).update_quality(item)
+                continue
             if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert":
                 if item.quality > 0:
                     if item.name != "Sulfuras, Hand of Ragnaros":
