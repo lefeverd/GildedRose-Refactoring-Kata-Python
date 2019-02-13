@@ -77,6 +77,16 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEqual(0, items[0].quality)
 
+    def test_backstage_pass_quality_normal_increase(self):
+        """
+        Verify the increase of the backstage pass when
+        no special conditions apply.
+        """
+        items = [Item("Backstage passes to a TAFKAL80ETC concert", 11, 20)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(21, items[0].quality)
+
     def test_multiple_items(self):
         items = [Item("Aged Brie", 5, 10), Item("Item", 5, 10)]
         gilded_rose = GildedRose(items)
