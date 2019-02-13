@@ -1,51 +1,10 @@
 # -*- coding: utf-8 -*-
 
-
-class DefaultBehavior:
-    def update_quality(self, item):
-        if item.sell_in <= 0:
-            item.quality = max(0, item.quality - 2)
-        else:
-            item.quality = max(0, item.quality - 1)
-        item.sell_in = item.sell_in - 1
-
-
-class AgedBrieBehavior:
-    def update_quality(self, item):
-        if item.sell_in <= 0:
-            item.quality = min(50, item.quality + 2)
-        else:
-            item.quality = min(50, item.quality + 1)
-        item.sell_in = item.sell_in - 1
-
-
-class BackstagePassTAFKAL80ETCBehavior:
-    def update_quality(self, item):
-        if item.sell_in <= 0:
-            item.quality = 0
-        elif item.sell_in <= 5:
-            item.quality = min(50, item.quality + 3)
-        elif item.sell_in <= 10:
-            item.quality = min(50, item.quality + 2)
-        else:
-            item.quality = min(50, item.quality + 1)
-        item.sell_in = item.sell_in - 1
-
-
-class SulfurasBehavior:
-    def update_quality(self, item):
-        # This is a legendary item, never has to be sold or never degrades.
-        pass
-
-
-class ConjuredBehavior:
-    def update_quality(self, item):
-        if item.sell_in <= 0:
-            item.quality = max(0, item.quality - 4)
-        else:
-            item.quality = max(0, item.quality - 2)
-        item.sell_in = item.sell_in - 1
-
+from gilded_rose.behaviors.default import DefaultBehavior
+from gilded_rose.behaviors.aged_brie import AgedBrieBehavior
+from gilded_rose.behaviors.backstage_pass import BackstagePassTAFKAL80ETCBehavior
+from gilded_rose.behaviors.conjured import ConjuredBehavior
+from gilded_rose.behaviors.sulfuras import SulfurasBehavior
 
 BEHAVIORS = {
     "Aged Brie": AgedBrieBehavior(),
