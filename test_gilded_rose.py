@@ -96,6 +96,24 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEqual(9, items[1].quality)
         self.assertEqual(4, items[1].sell_in)
 
+    def test_conjured_quality_decrease_twice(self):
+        items = [Item("Conjured", 11, 20)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(18, items[0].quality)
+
+    def test_conjured_quality_decrease_by_four_after_sell_in(self):
+        items = [Item("Conjured", 0, 20)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(16, items[0].quality)
+
+    def test_conjured_quality_never_negative(self):
+        items = [Item("Conjured", 0, 0)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual(0, items[0].quality)
+
 
 if __name__ == '__main__':
     unittest.main()
