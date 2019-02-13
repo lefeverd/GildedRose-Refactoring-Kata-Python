@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from gilded_rose.goods import Goods
 from gilded_rose.behaviors.default import DefaultBehavior
 from gilded_rose.behaviors.aged_brie import AgedBrieBehavior
 from gilded_rose.behaviors.backstage_pass import BackstagePassTAFKAL80ETCBehavior
@@ -7,11 +8,10 @@ from gilded_rose.behaviors.conjured import ConjuredBehavior
 from gilded_rose.behaviors.sulfuras import SulfurasBehavior
 
 BEHAVIORS = {
-    "Aged Brie": AgedBrieBehavior(),
-    "Backstage passes to a TAFKAL80ETC concert":
-    BackstagePassTAFKAL80ETCBehavior(),
-    "Sulfuras, Hand of Ragnaros": SulfurasBehavior(),
-    "Conjured": ConjuredBehavior(),
+    Goods.AGED_BRIE.value: AgedBrieBehavior(),
+    Goods.BACKSTAGE_PASS.value: BackstagePassTAFKAL80ETCBehavior(),
+    Goods.SULFURAS.value: SulfurasBehavior(),
+    Goods.CONJURED.value: ConjuredBehavior(),
 }
 
 DEFAULT_BEHAVIOR = DefaultBehavior()
