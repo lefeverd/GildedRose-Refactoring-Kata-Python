@@ -44,3 +44,7 @@ make coverage
 ```
 
 It will generate the HTML report in `htmlcov`.
+
+## Formatter
+
+The code is formatted using `yapf`: [https://github.com/google/yapf](https://github.com/google/yapf).

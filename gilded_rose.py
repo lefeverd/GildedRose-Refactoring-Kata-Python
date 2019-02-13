@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-class GildedRose(object):
 
+class GildedRose:
     def __init__(self, items):
         self.items = items
 

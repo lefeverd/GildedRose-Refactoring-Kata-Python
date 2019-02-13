@@ -3,6 +3,7 @@ import unittest
 
 from gilded_rose import Item, GildedRose
 
+
 class GildedRoseTest(unittest.TestCase):
     def test_item_sell_in_decrease(self):
         items = [Item("Item", 5, 20)]
@@ -75,6 +76,7 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose = GildedRose(items)
         gilded_rose.update_quality()
         self.assertEqual(0, items[0].quality)
+
 
 if __name__ == '__main__':
     unittest.main()
