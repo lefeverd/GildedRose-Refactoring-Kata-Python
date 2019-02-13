@@ -23,11 +23,17 @@ class BackstagePassTAFKAL80ETCBehavior:
         item.sell_in = item.sell_in - 1
 
 
+class SulfurasBehavior:
+    def update_quality(self, item):
+        # This is a legendary item, never has to be sold or never degrades.
+        pass
+
+
 BEHAVIORS = {
-    "Aged Brie":
-    AgedBrieBehavior(),
+    "Aged Brie": AgedBrieBehavior(),
     "Backstage passes to a TAFKAL80ETC concert":
     BackstagePassTAFKAL80ETCBehavior(),
+    "Sulfuras, Hand of Ragnaros": SulfurasBehavior(),
 }
 
 
